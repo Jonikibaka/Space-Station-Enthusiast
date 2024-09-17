@@ -4,4 +4,11 @@ body {
 ul li{
     display: inline;
 }
-/* Нету зверя сильнее кода... Старый бог сын джуниора*/
+
+#title2 {
+border: 2px solid red;
+width: 500px;
+height: 100vh;
+}
+
+/* Нету зверя сильнее кода... */
