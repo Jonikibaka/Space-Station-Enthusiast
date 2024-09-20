@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>Profile os site</header>
+    <nav>Navigation panel</nav>
+    <main> BOOM BOOM BOOM
+        <!-- Privet -->
+        <input  type="text">
+
+        <!-- Galochka! -->
+    <input type="checkbox">
+
+    <!-- Turn on/off-->
+    <input type="radio">
+    <textarea id="message" name="message"></textarea></textarea>
+        <section>Logical block
+            <aside>Unnes. content</aside>
+        </section>
+    </main>
+    <footer>Podval</footer>
+<select id="type" name="type">
+    <option>Our good cafe</option>
+    <option>All about coffe</option>
+    <option>About something</option>
+    <option> Other</option>
+
+    <form action="success.html" method="GET">
+    <label for="name"> Your name</label></td>
+    <input type="text" id="name" name="name" placeholder="Ivan">
+    <input type="reset"
+    value="clear">
+    <input type="submit"
+    value="submit">
+    
+    <label for="surname"> Your Surname</label></td>
+    <input type="text" id="surname" name="surname" placeholder="Van">
+    <input type="reset"
+    value="clear">
+    <input type="submit"
+    value="submit">
+    </form>
+
+
+</select>
+
+
+</body>
+<script> 
+    const f = document.forms[0]; 
+    let tr = document.getElementById("table"); 
+    let t = tr; 
+    f.addEventListener("submit", (e) => { 
+        e.preventDefault(); 
+        let body = {}; 
+        for (let i = 0; i < f.elements.length; i++) { 
+            let tag = f[i]; 
+            if (tag.name) { 
+                if (tag.type === "radio" && tag.checked) { 
+                    body[tag.name] = tag.value; 
+                } else if (tag.type !== "radio") { 
+                    body[tag.name] = tag.value; 
+                } 
+            } 
+        } 
+        console.log(body); 
+        let html = "<tr>"; 
+        html += `<td><img src="${body.image}" width="50" alt="${body.title}"></td>`; 
+        html += `<td>${body.title || ""}</td>`; 
+        html += `<td>${body.sort || ""}</td>`; 
+        html += `<td>${body.strong || ""}</td>`; 
+        html += `<td>${body.cost || ""}</td>`; 
+        html += `<td>${body.description || ""}</td>`; 
+        html += "</tr>" 
+        t.innerHTML += html; 
+    }) 
+</script>
+
+</html>
