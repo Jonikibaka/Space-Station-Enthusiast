@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    gap: 40px;
+}
+.container__item{
+    border: 1px solid red;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 214px;
+
+}
+.container__item-element{
+    width: 100px;
+    height: 100px;
+    background-color: 1px solid rgb(16, 45, 83);
+}
+.big{
+    width: 214px;
+}
